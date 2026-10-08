@@ -1,0 +1,202 @@
+/* Header sticky */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Evita que âncoras fiquem escondidas sob o header sticky */
+html {
+  scroll-padding-top: 4rem;
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* Marca */
+.navbar__brand,
+.navbar__brand:hover {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+/* Navegação (oculta no mobile) */
+.navbar__nav {
+  display: none;
+  margin-inline-end: calc(var(--space-4) * -1);
+}
+
+.navbar__list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar__link,
+.navbar__link:hover {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding-inline: var(--space-4);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.navbar__link {
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+/* Menu mobile aberto: painel logo abaixo da barra */
+.navbar__nav--open {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-inline-end: 0;
+  padding-block: var(--space-2);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-md);
+}
+
+.navbar__nav--open .navbar__list {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.navbar__nav--open .navbar__list li + li {
+  border-top: 1px solid var(--color-border);
+}
+
+.navbar__nav--open .navbar__link {
+  display: flex;
+  padding-inline: var(--gutter);
+  border-radius: 0;
+}
+
+/* Links de largura total: o contorno de foco fica por dentro para não ser cortado */
+.navbar__nav--open .navbar__link:focus-visible {
+  outline-offset: -3px;
+}
+
+/* Botão de menu (somente mobile) */
+.navbar__menu-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-inline-end: calc(var(--space-3) * -1);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-md);
+  background-color: transparent;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--ease-standard);
+}
+
+/* Ícone de menu desenhado com CSS */
+.navbar__menu-icon,
+.navbar__menu-icon::before,
+.navbar__menu-icon::after {
+  display: block;
+  width: 1.25rem;
+  height: 0.125rem;
+  border-radius: var(--radius-full);
+  background-color: currentColor;
+}
+
+.navbar__menu-icon {
+  position: relative;
+}
+
+.navbar__menu-icon::before,
+.navbar__menu-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.navbar__menu-icon::before {
+  top: -0.375rem;
+}
+
+.navbar__menu-icon::after {
+  top: 0.375rem;
+}
+
+/* Menu aberto: o ícone vira um X */
+.navbar__menu-button[aria-expanded="true"] .navbar__menu-icon {
+  background-color: transparent;
+}
+
+.navbar__menu-button[aria-expanded="true"] .navbar__menu-icon::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.navbar__menu-button[aria-expanded="true"] .navbar__menu-icon::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* Hover apenas em dispositivos com ponteiro */
+@media (hover: hover) {
+  .navbar__brand:hover {
+    color: var(--color-primary-hover);
+  }
+
+  .navbar__link:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+  }
+
+  .navbar__menu-button:hover {
+    background-color: var(--color-primary-soft);
+  }
+}
+
+/* Tablet em diante: navegação horizontal */
+@media (min-width: 768px) {
+  html {
+    scroll-padding-top: 4.75rem;
+  }
+
+  .navbar__inner {
+    height: 4.75rem;
+  }
+
+  .navbar__nav {
+    display: block;
+  }
+
+  .navbar__menu-button {
+    display: none;
+  }
+}

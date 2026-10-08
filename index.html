@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ninho | Espécies e cuidados de pequenos animais</title>
+  <meta name="description" content="Conheça pequenos animais como hamsters, furões, chinchilas, gerbils e porquinhos-da-índia: espécies, características e cuidados em um só lugar.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components/navbar.css">
+  <link rel="stylesheet" href="css/components/hero.css">
+  <link rel="stylesheet" href="css/components/species.css">
+  <link rel="stylesheet" href="css/components/featured-animals.css">
+  <link rel="stylesheet" href="css/components/responsible-care.css">
+  <link rel="stylesheet" href="css/components/guides.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a class="navbar__brand" href="#hero">Ninho.</a>
+
+      <button class="navbar__menu-button" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navbar-menu" hidden>
+        <span class="navbar__menu-icon" aria-hidden="true"></span>
+      </button>
+
+      <nav class="navbar__nav" id="navbar-menu" aria-label="Navegação principal">
+        <ul class="navbar__list">
+          <li><a class="navbar__link" href="#animais-em-destaque">Animais</a></li>
+          <li><a class="navbar__link" href="#especies">Espécies</a></li>
+          <li><a class="navbar__link" href="#cuidado-e-responsabilidade">Cuidados</a></li>
+          <li><a class="navbar__link" href="#guias">Guias</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section id="hero" class="hero" aria-labelledby="hero-titulo">
+      <div class="hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Pequenos companheiros</p>
+          <h1 id="hero-titulo" class="hero__title">Pequenos no tamanho. Gigantes na personalidade.</h1>
+          <p class="hero__description">Conheça diferentes espécies, características e cuidados para encontrar o pequeno companheiro que combina com você.</p>
+
+          <div class="hero__actions">
+            <a class="hero__primary-action" href="#animais-em-destaque">Explorar animais</a>
+            <a class="hero__secondary-action" href="#especies">Conhecer espécies <span class="hero__secondary-arrow" aria-hidden="true">→</span></a>
+          </div>
+
+          <ul class="hero__highlights">
+            <li>Espécies diversas</li>
+            <li>Cuidados responsáveis</li>
+            <li>Informação clara</li>
+          </ul>
+        </div>
+
+        <div class="hero__media">
+          <!-- Foto: "Hamster im Gras", autor Tux, Wikimedia Commons, domínio público (PD-self). https://commons.wikimedia.org/wiki/File:Hamster_im_Gras.jpg -->
+          <img
+            class="hero__image"
+            src="assets/images/hamster-hero.jpg"
+            srcset="assets/images/hamster-hero-960.jpg 960w, assets/images/hamster-hero.jpg 1600w"
+            sizes="(min-width: 1024px) 575px, (min-width: 768px) 50vw, 100vw"
+            width="1600"
+            height="1200"
+            alt="Hamster de pelagem creme e branca, visto de cima, caminhando sobre a grama."
+            fetchpriority="high">
+        </div>
+      </div>
+    </section>
+
+    <section id="especies" class="species" aria-labelledby="especies-titulo">
+      <div class="species__inner">
+        <header class="species__header">
+          <p class="species__eyebrow">Conheça as espécies</p>
+          <h2 id="especies-titulo" class="species__title">Cada espécie tem seu próprio jeito de conquistar você.</h2>
+          <p class="species__description">Explore características, comportamentos e cuidados para entender qual pequeno companheiro combina melhor com a sua rotina.</p>
+        </header>
+
+        <!--
+          Só Hamsters tem página publicada, então só esse card é um link. Os demais são informativos e não mostram "Conhecer espécie".
+
+          Fotos (Wikimedia Commons):
+          - Hamsters: "Hamster in the yard", Lo (https://www.flickr.com/photos/milkyfactory/6001485804/), CC0. https://commons.wikimedia.org/wiki/File:Hamster_in_the_yard.jpg
+          - Furões: "White Ferret with pink snout", Electo84, CC0. https://commons.wikimedia.org/wiki/File:White_Ferret_with_pink_snout.jpg
+          - Chinchilas: "Chinchilla lanigera1", Trurl66, domínio público. https://commons.wikimedia.org/wiki/File:Chinchilla_lanigera1.jpg
+          - Porquinhos-da-índia: "Guinea pig with a tonsure", ArtemisiaGentileschiFan, CC0. https://commons.wikimedia.org/wiki/File:Guinea_pig_with_a_tonsure.jpg
+          - Gerbils: "Meriones unguiculatus-front", Pacos (Wikipédia polonesa), domínio público. https://commons.wikimedia.org/wiki/File:Meriones_unguiculatus-front.jpg
+          As imagens foram apenas recortadas (4:3) e redimensionadas.
+        -->
+        <ul class="species__grid">
+          <li class="species-card species-card--featured species-card--linked">
+            <div class="species-card__media">
+              <img
+                class="species-card__image"
+                src="assets/images/species/hamster.jpg"
+                srcset="assets/images/species/hamster-640.jpg 640w, assets/images/species/hamster.jpg 1200w"
+                sizes="(min-width: 1024px) 466px, 100vw"
+                width="1200"
+                height="900"
+                loading="lazy"
+                decoding="async"
+                alt="Hamster de pelagem branca e preta, com uma listra branca na testa, entre pedras e pequenas flores amarelas.">
+            </div>
+            <a class="species-card__content species-card__link" href="especies/hamsters/">
+              <h3 class="species-card__name">Hamsters</h3>
+              <p class="species-card__description">Pequenos, curiosos e cheios de personalidade.</p>
+              <p class="species-card__action">Conhecer espécie <span aria-hidden="true">→</span></p>
+            </a>
+          </li>
+
+          <li class="species-card">
+            <div class="species-card__media">
+              <img
+                class="species-card__image"
+                src="assets/images/species/ferret.jpg"
+                srcset="assets/images/species/ferret-640.jpg 640w, assets/images/species/ferret.jpg 1200w"
+                sizes="(min-width: 1024px) 311px, (min-width: 768px) 50vw, 100vw"
+                width="1200"
+                height="900"
+                loading="lazy"
+                decoding="async"
+                alt="Furão branco de focinho rosado olhando para cima, em direção à câmera.">
+            </div>
+            <div class="species-card__content">
+              <h3 class="species-card__name">Furões</h3>
+              <p class="species-card__description">Energéticos, inteligentes e exploradores.</p>
+            </div>
+          </li>
+
+          <li class="species-card">
+            <div class="species-card__media">
+              <img
+                class="species-card__image"
+                src="assets/images/species/chinchilla.jpg"
+                srcset="assets/images/species/chinchilla-640.jpg 640w, assets/images/species/chinchilla.jpg 1200w"
+                sizes="(min-width: 1024px) 311px, (min-width: 768px) 50vw, 100vw"
+                width="1200"
+                height="900"
+                loading="lazy"
+                decoding="async"
+                alt="Chinchila cinza vista de perfil, com a cauda peluda, sobre o braço de um sofá.">
+            </div>
+            <div class="species-card__content">
+              <h3 class="species-card__name">Chinchilas</h3>
+              <p class="species-card__description">Delicadas, ativas e naturalmente curiosas.</p>
+            </div>
+          </li>
+
+          <li class="species-card">
+            <div class="species-card__media">
+              <img
+                class="species-card__image"
+                src="assets/images/species/guinea-pig.jpg"
+                srcset="assets/images/species/guinea-pig-640.jpg 640w, assets/images/species/guinea-pig.jpg 1200w"
+                sizes="(min-width: 1024px) 311px, (min-width: 768px) 50vw, 100vw"
+                width="1200"
+                height="900"
+                loading="lazy"
+                decoding="async"
+                alt="Porquinho-da-índia branco ao lado de uma tigela com folhas verdes.">
+            </div>
+            <div class="species-card__content">
+              <h3 class="species-card__name">Porquinhos-da-índia</h3>
+              <p class="species-card__description">Sociáveis, comunicativos e companheiros.</p>
+            </div>
+          </li>
+
+          <li class="species-card">
+            <div class="species-card__media">
+              <img
+                class="species-card__image"
+                src="assets/images/species/gerbil.jpg"
+                srcset="assets/images/species/gerbil-640.jpg 640w, assets/images/species/gerbil.jpg 1200w"
+                sizes="(min-width: 1024px) 311px, (min-width: 768px) 50vw, 100vw"
+                width="1200"
+                height="900"
+                loading="lazy"
+                decoding="async"
+                alt="Gerbil de frente, apoiado nas patas sobre um tecido azul, com as orelhas erguidas.">
+            </div>
+            <div class="species-card__content">
+              <h3 class="species-card__name">Gerbils</h3>
+              <p class="species-card__description">Ágeis, curiosos e muito observadores.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="animais-em-destaque" class="featured-animals" aria-labelledby="animais-em-destaque-titulo">
+      <div class="featured-animals__inner">
+        <header class="featured-animals__header">
+          <p class="featured-animals__eyebrow">Encontre seu companheiro</p>
+          <h2 id="animais-em-destaque-titulo">Animais em destaque</h2>
+          <p class="featured-animals__description">Conheça alguns dos pequenos companheiros disponíveis na Ninho.</p>
+        </header>
+
+        <!--
+          Os cards são renderizados por js/featured-animals.js a partir de data/animals.json (registros com featured: true).
+          Só viram link os animais com página publicada (getAnimalPagePath, em js/animal-utils.js); os demais são estáticos.
+
+          Fotos ilustrativas (Wikimedia Commons), apenas recortadas (4:3) e redimensionadas:
+          - Cookie: "Hamster In A Tree", Uwe Jelting, CC0 (importada do 500px pelo Archive Team). https://commons.wikimedia.org/wiki/File:Hamster_In_A_Tree_(184178955).jpeg
+          - Oliver: "FerretAfterShower", Jeff Weiss, domínio público (PD-self). https://commons.wikimedia.org/wiki/File:FerretAfterShower.jpg
+          - Luna: "RunningChin", Trurl66, domínio público (PD-user-en). https://commons.wikimedia.org/wiki/File:RunningChin.jpg
+        -->
+        <p class="featured-animals__message" id="featured-animals-status" role="status" hidden></p>
+        <ul class="featured-animals__grid" id="featured-animals-list" aria-busy="true" hidden></ul>
+        <noscript>
+          <p class="featured-animals__message">Ative o JavaScript para ver os animais em destaque.</p>
+        </noscript>
+
+        <p class="featured-animals__note">Os animais e as fotografias desta seção são ilustrativos.</p>
+      </div>
+    </section>
+
+    <section id="cuidado-e-responsabilidade" class="responsible-care" aria-labelledby="cuidado-e-responsabilidade-titulo">
+      <div class="responsible-care__inner">
+        <div class="responsible-care__intro">
+          <p class="responsible-care__eyebrow">Escolha com responsabilidade</p>
+          <h2 id="cuidado-e-responsabilidade-titulo" class="responsible-care__title">Um pequeno animal também exige um grande compromisso.</h2>
+          <p class="responsible-care__description">Antes de escolher um companheiro, é importante entender sua rotina, necessidades e características. Uma escolha responsável começa com informação e preparo.</p>
+        </div>
+
+        <ul class="responsible-care__list">
+          <li class="responsible-care__item">
+            <span class="responsible-care__number" aria-hidden="true">01</span>
+            <div>
+              <h3 class="responsible-care__item-title">Ambiente adequado</h3>
+              <p class="responsible-care__item-description">Espaço seguro, confortável e preparado para as necessidades da espécie.</p>
+            </div>
+          </li>
+          <li class="responsible-care__item">
+            <span class="responsible-care__number" aria-hidden="true">02</span>
+            <div>
+              <h3 class="responsible-care__item-title">Alimentação correta</h3>
+              <p class="responsible-care__item-description">Uma rotina alimentar compatível com a espécie e cada fase da vida.</p>
+            </div>
+          </li>
+          <li class="responsible-care__item">
+            <span class="responsible-care__number" aria-hidden="true">03</span>
+            <div>
+              <h3 class="responsible-care__item-title">Rotina e enriquecimento</h3>
+              <p class="responsible-care__item-description">Estímulos, interação e atividades que favoreçam o bem-estar.</p>
+            </div>
+          </li>
+          <li class="responsible-care__item">
+            <span class="responsible-care__number" aria-hidden="true">04</span>
+            <div>
+              <h3 class="responsible-care__item-title">Acompanhamento responsável</h3>
+              <p class="responsible-care__item-description">Observação frequente e acesso a orientação profissional quando necessário.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="guias" class="guides" aria-labelledby="guias-titulo">
+      <div class="guides__inner">
+        <header class="guides__header">
+          <p class="guides__eyebrow">Guias e conteúdo</p>
+          <h2 id="guias-titulo" class="guides__title">Informação para cuidar melhor.</h2>
+          <p class="guides__description">Conteúdo para ajudar você a conhecer necessidades, comportamentos e cuidados antes e depois da escolha.</p>
+        </header>
+
+        <!--
+          Guias editoriais de exemplo: não há páginas de artigo, por isso os guias não são links.
+
+          Fotos ilustrativas (Wikimedia Commons), apenas recortadas (4:3) e redimensionadas:
+          - Cuidados: "Finished hamster habitat project", Lo (https://www.flickr.com/photos/milkyfactory/6002740241/), CC0. https://commons.wikimedia.org/wiki/File:Finished_hamster_habitat_project.jpg
+          - Alimentação: "A Guinea pig and its carrot", Kuli, CC0. https://commons.wikimedia.org/wiki/File:A_Guinea_pig_and_its_carrot.jpg
+          - Bem-estar: "Gerbil ready to start eating", Maniago, domínio público (PD-self). https://commons.wikimedia.org/wiki/File:Gerbil_ready_to_start_eating.JPG
+        -->
+        <div class="guides__grid">
+          <article class="guide-card guide-card--featured">
+            <div class="guide-card__media">
+              <img
+                class="guide-card__image"
+                src="assets/images/guides/environment.jpg"
+                srcset="assets/images/guides/environment-800.jpg 800w, assets/images/guides/environment.jpg 1600w"
+                sizes="(min-width: 1024px) 640px, 100vw"
+                width="1600"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+                alt="Habitat amplo para pequenos roedores, com casinhas de madeira, uma rampa e cama de maravalha, instalado em uma sala.">
+            </div>
+            <div class="guide-card__content">
+              <p class="guide-card__category">Cuidados</p>
+              <h3 class="guide-card__title">Como preparar um ambiente seguro e confortável</h3>
+              <p class="guide-card__description">Veja os pontos essenciais para organizar um espaço adequado antes da chegada de um pequeno companheiro.</p>
+            </div>
+          </article>
+
+          <article class="guide-card">
+            <div class="guide-card__media">
+              <img
+                class="guide-card__image"
+                src="assets/images/guides/food.jpg"
+                srcset="assets/images/guides/food-640.jpg 640w, assets/images/guides/food.jpg 1200w"
+                sizes="(min-width: 1024px) 320px, (min-width: 768px) 50vw, 100vw"
+                width="1200"
+                height="900"
+                loading="lazy"
+                decoding="async"
+                alt="Porquinho-da-índia comendo uma cenoura sobre a grama.">
+            </div>
+            <div class="guide-card__content">
+              <p class="guide-card__category">Alimentação</p>
+              <h3 class="guide-card__title">O que considerar na rotina alimentar</h3>
+              <p class="guide-card__description">Entenda por que cada espécie possui necessidades próprias e exige uma rotina adequada.</p>
+            </div>
+          </article>
+
+          <article class="guide-card">
+            <div class="guide-card__media">
+              <img
+                class="guide-card__image"
+                src="assets/images/guides/enrichment.jpg"
+                srcset="assets/images/guides/enrichment-640.jpg 640w, assets/images/guides/enrichment.jpg 1200w"
+                sizes="(min-width: 1024px) 320px, (min-width: 768px) 50vw, 100vw"
+                width="1200"
+                height="900"
+                loading="lazy"
+                decoding="async"
+                alt="Gerbil de pelagem clara junto a brinquedos coloridos de madeira, em meio à cama de maravalha.">
+            </div>
+            <div class="guide-card__content">
+              <p class="guide-card__category">Bem-estar</p>
+              <h3 class="guide-card__title">Enriquecimento faz parte dos cuidados</h3>
+              <p class="guide-card__description">Descubra a importância de estímulos, atividades e interação para uma rotina mais saudável.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__top">
+        <div class="site-footer__about">
+          <p class="site-footer__brand">Ninho.</p>
+          <p class="site-footer__tagline">Pequenos companheiros, grandes responsabilidades.</p>
+        </div>
+
+        <nav class="site-footer__nav" aria-label="Navegação do rodapé">
+          <h2 class="site-footer__nav-title">Explore</h2>
+          <ul class="site-footer__nav-list">
+            <li><a class="site-footer__nav-link" href="#animais-em-destaque">Animais</a></li>
+            <li><a class="site-footer__nav-link" href="#especies">Espécies</a></li>
+            <li><a class="site-footer__nav-link" href="#cuidado-e-responsabilidade">Cuidados</a></li>
+            <li><a class="site-footer__nav-link" href="#guias">Guias</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p class="site-footer__note">Projeto demonstrativo · Animais e conteúdos ilustrativos</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/navbar.js"></script>
+  <script type="module" src="js/featured-animals.js"></script>
+</body>
+</html>

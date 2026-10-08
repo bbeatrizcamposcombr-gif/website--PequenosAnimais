@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hamsters | Ninho</title>
+  <meta name="description" content="Conheça os hamsters apresentados pela Ninho e encontre informações para fazer uma escolha responsável.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap">
+
+  <!-- Estilos (esta página fica em especies/hamsters/, dois níveis abaixo da raiz) -->
+  <link rel="stylesheet" href="../../css/variables.css">
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/components/navbar.css">
+  <link rel="stylesheet" href="../../css/components/featured-animals.css">
+  <link rel="stylesheet" href="../../css/components/footer.css">
+  <link rel="stylesheet" href="../../css/components/breadcrumb.css">
+  <link rel="stylesheet" href="../../css/pages/species-detail.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a class="navbar__brand" href="../../index.html">Ninho.</a>
+
+      <button class="navbar__menu-button" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navbar-menu" hidden>
+        <span class="navbar__menu-icon" aria-hidden="true"></span>
+      </button>
+
+      <nav class="navbar__nav" id="navbar-menu" aria-label="Navegação principal">
+        <ul class="navbar__list">
+          <li><a class="navbar__link" href="../../index.html#animais-em-destaque">Animais</a></li>
+          <li><a class="navbar__link" href="../../index.html#especies">Espécies</a></li>
+          <li><a class="navbar__link" href="../../index.html#cuidado-e-responsabilidade">Cuidados</a></li>
+          <li><a class="navbar__link" href="../../index.html#guias">Guias</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Trilha de navegação">
+      <ol class="breadcrumb__list">
+        <li class="breadcrumb__item"><a class="breadcrumb__link" href="../../index.html">Início</a></li>
+        <li class="breadcrumb__item"><span class="breadcrumb__current" aria-current="page">Hamsters</span></li>
+      </ol>
+    </nav>
+
+    <!-- Identidade da espécie: nome, resumo e imagem vêm de data/species.json (id "hamster") -->
+    <section class="species-hero" id="species-hero" aria-labelledby="species-title">
+      <div class="species-hero__inner">
+        <div class="species-hero__content">
+          <p class="species-hero__eyebrow">Espécie</p>
+          <h1 id="species-title" class="species-hero__title">Hamsters</h1>
+          <p class="species-hero__summary" id="species-summary" hidden></p>
+          <noscript>
+            <p class="species-page__message">Ative o JavaScript para ver o resumo e a foto desta espécie.</p>
+          </noscript>
+        </div>
+
+        <div class="species-hero__media" id="species-media" hidden></div>
+      </div>
+    </section>
+
+    <section class="species-intro" aria-labelledby="species-intro-title">
+      <div class="species-intro__inner">
+        <h2 id="species-intro-title">Conheça os hamsters</h2>
+        <p class="species-intro__text">Cada pequeno companheiro tem características próprias. Conheça os animais apresentados pela Ninho e consulte informações específicas antes de fazer uma escolha.</p>
+      </div>
+    </section>
+
+    <!--
+      Fotos ilustrativas desta página (Wikimedia Commons). As versões locais foram apenas recortadas (4:3) e redimensionadas.
+      - Espécie: "Hamster in the yard", Lo (https://www.flickr.com/photos/milkyfactory/6001485804/), CC0. https://commons.wikimedia.org/wiki/File:Hamster_in_the_yard.jpg
+      - Cookie: "Hamster In A Tree", Uwe Jelting, CC0 (importada do 500px pelo Archive Team). https://commons.wikimedia.org/wiki/File:Hamster_In_A_Tree_(184178955).jpeg
+      - Nina: "DjungarianHamster Diesel", Adamderesz, domínio público (PD-self). Origem: Wikimedia Commons, arquivo DjungarianHamster_Diesel.jpg. https://commons.wikimedia.org/wiki/File:DjungarianHamster_Diesel.jpg
+        A versão local foi recortada para 4:3 e redimensionada.
+    -->
+
+    <!-- Animais de data/animals.json cujo campo species é "hamster". O campo breed é só um rótulo de exibição. -->
+    <section class="species-animals" aria-labelledby="species-animals-title">
+      <div class="species-animals__inner">
+        <h2 id="species-animals-title">Hamsters apresentados</h2>
+
+        <p class="species-page__message" id="species-animals-status" role="status" hidden></p>
+        <ul class="species-animals__grid" id="species-animals-list" hidden></ul>
+        <noscript>
+          <p class="species-page__message">Ative o JavaScript para ver os hamsters apresentados.</p>
+        </noscript>
+
+        <p class="species-animals__note">Os animais e as fotografias desta seção são ilustrativos.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__top">
+        <div class="site-footer__about">
+          <p class="site-footer__brand">Ninho.</p>
+          <p class="site-footer__tagline">Pequenos companheiros, grandes responsabilidades.</p>
+        </div>
+
+        <nav class="site-footer__nav" aria-label="Navegação do rodapé">
+          <h2 class="site-footer__nav-title">Explore</h2>
+          <ul class="site-footer__nav-list">
+            <li><a class="site-footer__nav-link" href="../../index.html#animais-em-destaque">Animais</a></li>
+            <li><a class="site-footer__nav-link" href="../../index.html#especies">Espécies</a></li>
+            <li><a class="site-footer__nav-link" href="../../index.html#cuidado-e-responsabilidade">Cuidados</a></li>
+            <li><a class="site-footer__nav-link" href="../../index.html#guias">Guias</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p class="site-footer__note">Projeto demonstrativo · Animais e conteúdos ilustrativos</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/navbar.js"></script>
+  <script type="module" src="../../js/species-page.js"></script>
+</body>
+</html>

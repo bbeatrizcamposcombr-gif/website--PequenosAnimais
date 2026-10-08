@@ -1,0 +1,54 @@
+{
+  "species": [
+    {
+      "id": "hamster",
+      "slug": "hamsters",
+      "name": "Hamster",
+      "namePlural": "Hamsters",
+      "summary": "Pequenos, curiosos e cheios de personalidade.",
+      "image": "assets/images/species/hamster.jpg",
+      "imageAlt": "Hamster de pelagem branca e preta, com uma listra branca na testa, entre pedras e flores amarelas.",
+      "order": 1
+    },
+    {
+      "id": "ferret",
+      "slug": "furoes",
+      "name": "Furão",
+      "namePlural": "Furões",
+      "summary": "Energéticos, inteligentes e exploradores.",
+      "image": "assets/images/species/ferret.jpg",
+      "imageAlt": "Furão branco de focinho rosado olhando para cima, em direção à câmera.",
+      "order": 2
+    },
+    {
+      "id": "chinchilla",
+      "slug": "chinchilas",
+      "name": "Chinchila",
+      "namePlural": "Chinchilas",
+      "summary": "Delicadas, ativas e naturalmente curiosas.",
+      "image": "assets/images/species/chinchilla.jpg",
+      "imageAlt": "Chinchila cinza vista de perfil, com a cauda peluda, sobre o braço de um sofá.",
+      "order": 3
+    },
+    {
+      "id": "guinea-pig",
+      "slug": "porquinhos-da-india",
+      "name": "Porquinho-da-índia",
+      "namePlural": "Porquinhos-da-índia",
+      "summary": "Sociáveis, comunicativos e companheiros.",
+      "image": "assets/images/species/guinea-pig.jpg",
+      "imageAlt": "Porquinho-da-índia branco ao lado de uma tigela com folhas verdes.",
+      "order": 4
+    },
+    {
+      "id": "gerbil",
+      "slug": "gerbils",
+      "name": "Gerbil",
+      "namePlural": "Gerbils",
+      "summary": "Ágeis, curiosos e muito observadores.",
+      "image": "assets/images/species/gerbil.jpg",
+      "imageAlt": "Gerbil de frente sobre um tecido azul, com as orelhas erguidas.",
+      "order": 5
+    }
+  ]
+}

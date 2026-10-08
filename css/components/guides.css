@@ -1,0 +1,151 @@
+.guides {
+  padding-block: var(--space-8);
+  background-color: var(--color-background);
+}
+
+.guides__inner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* Cabeçalho */
+.guides__header {
+  max-width: 40rem;
+  margin-bottom: var(--space-7);
+}
+
+.guides__eyebrow {
+  margin-bottom: var(--space-4);
+  font-size: var(--text-eyebrow);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.guides__description {
+  max-width: 34rem;
+  margin-top: var(--space-4);
+  font-size: var(--text-body-lg);
+  color: var(--color-text-muted);
+  text-wrap: pretty;
+}
+
+/* Grade editorial */
+.guides__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-7);
+}
+
+/* Guia: sem caixa, separado por um filete */
+.guide-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-border-strong);
+}
+
+.guide-card__media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface-alt);
+}
+
+.guide-card__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.guide-card__category {
+  font-size: var(--text-eyebrow);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.guide-card__title {
+  margin-top: var(--space-2);
+}
+
+.guide-card__description {
+  margin-top: var(--space-3);
+  color: var(--color-text-muted);
+}
+
+/* Guia principal: foto mais alta e tipografia maior */
+.guide-card--featured .guide-card__media {
+  aspect-ratio: 4 / 3;
+}
+
+.guide-card--featured .guide-card__title {
+  font-size: var(--text-h2);
+}
+
+.guide-card--featured .guide-card__description {
+  font-size: var(--text-body-lg);
+}
+
+/* Tablet: principal na largura toda, secundários em duas colunas */
+@media (min-width: 768px) {
+  .guides {
+    padding-block: var(--space-9);
+  }
+
+  .guides__header {
+    margin-bottom: var(--space-8);
+  }
+
+  .guides__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-8) var(--space-6);
+  }
+
+  .guide-card--featured {
+    grid-column: 1 / -1;
+  }
+
+  .guide-card__media {
+    aspect-ratio: 3 / 2;
+  }
+
+  .guide-card--featured .guide-card__media {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* Desktop: principal em duas áreas, secundários com foto ao lado do texto */
+@media (min-width: 1024px) {
+  .guide-card {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    align-items: start;
+    gap: var(--space-5);
+  }
+
+  .guide-card__media,
+  .guide-card--featured .guide-card__media {
+    aspect-ratio: 4 / 3;
+  }
+
+  .guide-card--featured {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    align-items: center;
+    gap: var(--space-7);
+    padding-top: var(--space-7);
+  }
+
+  .guide-card--featured .guide-card__title {
+    font-size: var(--text-h1);
+  }
+}

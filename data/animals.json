@@ -1,0 +1,80 @@
+{
+  "animals": [
+    {
+      "id": 1,
+      "slug": "cookie-hamster-sirio",
+      "name": "Cookie",
+      "species": "hamster",
+      "breed": "Hamster Sírio",
+      "ageMonths": 4,
+      "sex": "female",
+      "status": "available",
+      "description": "Curiosa, tranquila e muito observadora.",
+      "image": "assets/images/animals/cookie.jpg",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "slug": "oliver-furao-domestico",
+      "name": "Oliver",
+      "species": "ferret",
+      "breed": "Furão Doméstico",
+      "ageMonths": 14,
+      "sex": "male",
+      "status": "available",
+      "description": "Brincalhão e ativo, adora explorar cada cantinho.",
+      "image": "assets/images/animals/oliver.jpg",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "slug": "luna-chinchila-standard",
+      "name": "Luna",
+      "species": "chinchilla",
+      "breed": "Chinchila Standard",
+      "ageMonths": 10,
+      "sex": "female",
+      "status": "available",
+      "description": "Delicada e ágil, mais ativa no fim do dia.",
+      "image": "assets/images/animals/luna.jpg",
+      "featured": true
+    },
+    {
+      "id": 4,
+      "slug": "pipoca-porquinho-da-india-abissinio",
+      "name": "Pipoca",
+      "species": "guinea-pig",
+      "breed": "Porquinho-da-índia Abissínio",
+      "ageMonths": 6,
+      "sex": "male",
+      "status": "available",
+      "description": "Sociável e comunicativo, adora companhia.",
+      "featured": false
+    },
+    {
+      "id": 5,
+      "slug": "theo-gerbil-da-mongolia",
+      "name": "Theo",
+      "species": "gerbil",
+      "breed": "Gerbil-da-mongólia",
+      "ageMonths": 5,
+      "sex": "male",
+      "status": "reserved",
+      "description": "Ágil e atento, está sempre de olho em tudo.",
+      "featured": false
+    },
+    {
+      "id": 6,
+      "slug": "nina-hamster-anao-russo",
+      "name": "Nina",
+      "species": "hamster",
+      "breed": "Hamster Anão Russo",
+      "ageMonths": 3,
+      "sex": "female",
+      "status": "available",
+      "description": "Pequena e rápida, bastante curiosa com o que é novo.",
+      "image": "assets/images/animals/nina.jpg",
+      "featured": false
+    }
+  ]
+}

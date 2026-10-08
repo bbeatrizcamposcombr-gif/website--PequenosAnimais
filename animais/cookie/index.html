@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cookie | Ninho</title>
+  <meta name="description" content="Conheça Cookie e acesse informações relacionadas à espécie para uma escolha responsável.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap">
+
+  <!-- Estilos (esta página fica em animais/cookie/, dois níveis abaixo da raiz) -->
+  <link rel="stylesheet" href="../../css/variables.css">
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/components/navbar.css">
+  <link rel="stylesheet" href="../../css/components/footer.css">
+  <link rel="stylesheet" href="../../css/components/breadcrumb.css">
+  <link rel="stylesheet" href="../../css/pages/animal-detail.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a class="navbar__brand" href="../../index.html">Ninho.</a>
+
+      <button class="navbar__menu-button" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navbar-menu" hidden>
+        <span class="navbar__menu-icon" aria-hidden="true"></span>
+      </button>
+
+      <nav class="navbar__nav" id="navbar-menu" aria-label="Navegação principal">
+        <ul class="navbar__list">
+          <li><a class="navbar__link" href="../../index.html#animais-em-destaque">Animais</a></li>
+          <li><a class="navbar__link" href="../../index.html#especies">Espécies</a></li>
+          <li><a class="navbar__link" href="../../index.html#cuidado-e-responsabilidade">Cuidados</a></li>
+          <li><a class="navbar__link" href="../../index.html#guias">Guias</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Trilha de navegação">
+      <ol class="breadcrumb__list">
+        <li class="breadcrumb__item"><a class="breadcrumb__link" href="../../index.html">Início</a></li>
+        <li class="breadcrumb__item"><a class="breadcrumb__link" href="../../especies/hamsters/">Hamsters</a></li>
+        <li class="breadcrumb__item"><span class="breadcrumb__current" aria-current="page">Cookie</span></li>
+      </ol>
+    </nav>
+
+    <!--
+      Foto ilustrativa de Cookie (Wikimedia Commons), apenas recortada (4:3) e redimensionada:
+      "Hamster In A Tree", Uwe Jelting, CC0 (importada do 500px pelo Archive Team). https://commons.wikimedia.org/wiki/File:Hamster_In_A_Tree_(184178955).jpeg
+    -->
+
+    <!-- Perfil: os dados de Cookie vêm de data/animals.json (localizado pelo slug da página) -->
+    <section class="animal-profile" id="animal-profile" aria-labelledby="animal-title">
+      <div class="animal-profile__inner">
+        <div class="animal-profile__media" id="animal-media" hidden></div>
+
+        <div class="animal-profile__info">
+          <p class="animal-profile__label" id="animal-label" hidden></p>
+          <h1 id="animal-title" class="animal-profile__title">Cookie</h1>
+          <p class="animal-profile__meta" id="animal-meta" hidden></p>
+          <p class="animal-profile__status" id="animal-status" hidden></p>
+          <p class="animal-page__message" id="animal-message" role="status" hidden></p>
+          <p class="animal-profile__note">Perfil demonstrativo · Animal fictício</p>
+          <noscript>
+            <p class="animal-page__message">Ative o JavaScript para ver a foto e os detalhes de Cookie.</p>
+          </noscript>
+        </div>
+      </div>
+    </section>
+
+    <section class="animal-details" id="animal-details" aria-label="Detalhes de Cookie">
+      <div class="animal-details__inner">
+        <div class="animal-details__about">
+          <h2>Sobre Cookie</h2>
+          <p class="animal-details__description" id="animal-description" hidden></p>
+        </div>
+
+        <div class="animal-details__facts">
+          <h2>Ficha do animal</h2>
+          <dl class="animal-facts" id="animal-facts" hidden></dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- Espécie: nome, resumo e endereço vêm de data/species.json (id igual ao campo species do animal) -->
+    <section class="animal-species" aria-labelledby="animal-species-title">
+      <div class="animal-species__inner">
+        <h2 id="animal-species-title">Sobre a espécie</h2>
+        <p class="animal-page__message" id="species-message" role="status" hidden></p>
+        <div class="animal-species__content" id="species-content" hidden></div>
+        <noscript>
+          <p class="animal-page__message">Ative o JavaScript para ver as informações da espécie.</p>
+        </noscript>
+      </div>
+    </section>
+
+    <section class="animal-guidance" aria-labelledby="animal-guidance-title">
+      <div class="animal-guidance__inner">
+        <div class="animal-guidance__box">
+          <h2 id="animal-guidance-title">Antes de escolher</h2>
+          <p class="animal-guidance__text">Conhecer as necessidades da espécie e avaliar sua rotina faz parte de uma escolha responsável.</p>
+          <a class="animal-guidance__link" href="../../especies/hamsters/">Conhecer os hamsters</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__top">
+        <div class="site-footer__about">
+          <p class="site-footer__brand">Ninho.</p>
+          <p class="site-footer__tagline">Pequenos companheiros, grandes responsabilidades.</p>
+        </div>
+
+        <nav class="site-footer__nav" aria-label="Navegação do rodapé">
+          <h2 class="site-footer__nav-title">Explore</h2>
+          <ul class="site-footer__nav-list">
+            <li><a class="site-footer__nav-link" href="../../index.html#animais-em-destaque">Animais</a></li>
+            <li><a class="site-footer__nav-link" href="../../index.html#especies">Espécies</a></li>
+            <li><a class="site-footer__nav-link" href="../../index.html#cuidado-e-responsabilidade">Cuidados</a></li>
+            <li><a class="site-footer__nav-link" href="../../index.html#guias">Guias</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p class="site-footer__note">Projeto demonstrativo · Animais e conteúdos ilustrativos</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/navbar.js"></script>
+  <script type="module" src="../../js/animal-page.js"></script>
+</body>
+</html>
